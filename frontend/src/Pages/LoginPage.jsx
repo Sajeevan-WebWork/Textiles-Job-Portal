@@ -16,12 +16,7 @@ const LoginPage = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      const response = await login(email, password);
-      toast.success(response.message); // Show the message from the response
-    } catch (err) {
-      toast.error(error);
-    }
+    await login(email, password);
   };
 
 
